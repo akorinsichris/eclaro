@@ -8,7 +8,7 @@ st.title("GSD Dashboard")
 
 total_count=df.count()
 total_resource=df["ACCT_NAME"].count()
-total_manager=df["ROLE==Manager"].count()
+# total_manager=df["ROLE==Manager"].count()
 
 col1,col2,col3=st.columns(3)
 
