@@ -6,9 +6,9 @@ df = pd.read_csv("https://raw.githubusercontent.com/akorinsichris/eclaro/main/re
 
 st.title("GSD Dashboard")
 
-total_count=df.count()
+total_count=df["EID"].count()
 total_resource=df["ACCT_NAME"].count()
-# total_manager=df["ROLE==Manager"].count()
+total_manager=df["ROLE"].count()
 
 col1,col2,col3=st.columns(3)
 
@@ -25,7 +25,6 @@ with col3:
 
 st.markdown("---")
 
-
 st.sidebar.header("Filter By:")
 
 account=st.sidebar.multiselect("Filter By Account:",
@@ -34,7 +33,7 @@ account=st.sidebar.multiselect("Filter By Account:",
 
 selection_query=df.query("ACCT_NAME==@account")
 
-# --st.dataframe(selection_query)
+st.dataframe(selection_query)
 
 
 
