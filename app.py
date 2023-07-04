@@ -7,8 +7,8 @@ df = pd.read_csv("https://raw.githubusercontent.com/akorinsichris/eclaro/main/re
 st.title("GSD Dashboard")
 
 total_count=df.count()
-total_resource=df.query(["ACCT_NAME"].count())
-total_manager=df.query("ROLE==Manager").count()
+total_resource=df["ACCT_NAME"].count()
+total_manager=df.["ROLE==Manager"].count()
 
 col1,col2,col3=st.columns(3)
 
