@@ -7,15 +7,16 @@ df = pd.read_csv("https://raw.githubusercontent.com/akorinsichris/eclaro/main/re
 
 st.title("GSD Dashboard")
 
-total_count=df["EID"].count()
-total_resource=df["ACCT_NAME"].count()
+# total_count=df["EID"].count()
+total_account=len(df[df["ACCT_NAME"]].unique())
+total_resource=df["EID"].count()
 total_manager=len(df[df["ROLE"] == 'Manager'])
 
 col1,col2,col3=st.columns(3)
 
 with col1:
-  st.markdown("### Account Count:")
-  st.subheader(f'{total_count}')
+  st.markdown("### Account Account:")
+  st.subheader(f'{total_account}')
 with col2:
   st.markdown("### Resource Count:")
   st.subheader(f'{total_resource}')
