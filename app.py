@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # read csv from a github repo
 df = pd.read_csv("https://raw.githubusercontent.com/akorinsichris/eclaro/main/resource_account.csv")
