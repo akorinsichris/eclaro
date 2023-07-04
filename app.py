@@ -39,8 +39,8 @@ selection_query=df.query("ACCT_NAME==@account")
 account_per_cnt = (selection_query.groupby(by=['ACCT_NAME']).count()['EID'])
 
 account_per_cnt_barchart=px.bar(account_per_cnt,
-                                x='EID',
-                                y=account_per_cnt.index,
+                                x=account_per_cnt.index,
+                                y='EID',
                                 title='Count per Account',
                                 color_discrete_sequence=["#17f50c"],
                                )
