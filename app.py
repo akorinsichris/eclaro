@@ -5,7 +5,7 @@ import pandas as pd
 df = pd.read_csv("https://raw.githubusercontent.com/akorinsichris/eclaro/main/resource.csv")
 
 st.title("GSD Dashboard")
-selection_query=df.query("ACCT_NAME==@account")
+
 total_count=df.count()
 total_resource=df.query("ACCT_NAME".count())
 total_manager=df.query("ROLE==Manager").count()
