@@ -12,7 +12,7 @@ account=st.sidebar.multiselect("Filter By Account:",
 
 selection_query=df.query("ACCT_NAME==@account")
 
-#st.dataframe(selection_query)
+# --st.dataframe(selection_query)
 st.title("GSD Dashboard")
 
 total_count=(selection_query["ACCT_NAME"].count())
