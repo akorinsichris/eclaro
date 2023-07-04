@@ -1,7 +1,7 @@
 import streamlit as st
 
 # initialize connection
-conn = st.experimental_connection('snowflake', type='sql')
+conn = st.experimental_connection('snowflake')
 
 #load the table as a dataframe using the snowpark session.
 @st.cache_date
